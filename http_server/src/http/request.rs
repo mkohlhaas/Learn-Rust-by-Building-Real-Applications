@@ -42,7 +42,7 @@ impl<'buf> TryFrom<&'buf [u8]> for Request<'buf> {
             return Err(ParseError::InvalidProtocol);
         }
 
-        let method: Method = method.parse()?;
+        let method = method.parse()?;
 
         let mut query_string = None;
         if let Some(i) = path.find('?') {

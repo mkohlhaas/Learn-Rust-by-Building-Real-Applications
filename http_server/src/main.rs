@@ -8,7 +8,7 @@ mod http;
 mod server;
 mod website_handler;
 
-const SERVER_IP : &str = "127.0.0.1:8080";
+const SERVER_IP: &str = "127.0.0.1:8080";
 
 fn main() {
     // let string = String::from("sdfasdf");
