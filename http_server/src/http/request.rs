@@ -51,9 +51,9 @@ impl<'buf> TryFrom<&'buf [u8]> for Request<'buf> {
         }
 
         Ok(Self {
+            method,
             path,
             query_string,
-            method,
         })
     }
 }
@@ -100,6 +100,7 @@ impl From<Utf8Error> for ParseError {
 
 impl Display for ParseError {
     fn fmt(&self, f: &mut Formatter) -> FmtResult {
+
         write!(f, "{}", self.message())
     }
 }
